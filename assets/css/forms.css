@@ -1,0 +1,90 @@
+form {
+  /* Center the form on the page */
+  margin: 0 auto;
+  width: 500px;
+  /* Form outline */
+  padding: 1em;
+}
+
+
+form div {
+  margin-top: 1em;
+}
+
+label {
+  /* Uniform size & alignment */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+
+input,
+textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+
+  /* Uniform text field size */
+  width: 300px;
+  box-sizing: border-box;
+
+  /* Match form field borders */
+  border: 1px solid #999;
+  padding: .5rem;
+}
+
+fieldset {
+  padding: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  /* Additional highlight for focused elements */
+  border-color: #000;
+}
+
+textarea {
+  /* Align multiline text fields with their labels */
+  vertical-align: top;
+
+  /* Provide space to type some text */
+  height: 5em;
+}
+
+.button {
+  /* Align buttons with the text fields */
+  padding-left: 90px; /* same size as the label elements */
+}
+
+button {
+  /* This extra margin represent roughly the same space as the space
+     between the labels and their text fields */
+  margin-left: .5em;
+}
+
+form input[type=submit] {
+  background-color: #69c!important;
+    border-color: #69c;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: none;
+    color: #fff!important;
+    cursor: pointer;
+    font-family: Lato,Arial,Helvetica,sans-serif;
+    font-size: 16px!important;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 10px!important;
+    width: 25%;
+    height: auto;
+    margin-top: 1rem;
+}
+
+.breadcrumbs {
+  list-style: none;
+  margin-left: 0;
+}
+
+.breadcrumbs li {
+  display: inline;
+}

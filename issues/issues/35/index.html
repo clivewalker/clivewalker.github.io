@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class=" no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perchology - Issue 35</title>
+<meta name="description" content="Admin Styling App, Algolia Sync, Admin Theme, Redactor Editor Customisation, Perch Production Modes, Managing Content with Runway, Site Examples">
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic" rel="stylesheet">
+<style>
+body { font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.issue__heading,.page__header,.category__title,.issue__pager__text time { font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif; }
+</style>
+
+<link href="../../assets/publication/themes/public_1/application.css" media="all" rel="stylesheet" />
+<link href="../../assets/stylesheet.css" media="all" rel="stylesheet" />
+<script src="../../assets/publication/themes/public_1/application.js"></script>
+
+
+
+  <meta property="og:title" content='Admin Styling App, Algolia Sync, Admin Theme, Redactor Editor Customisation, Perch Production Modes, Managing Content with Runway, Site Examples'></meta>
+  <meta property="og:title" content='Perchology - Issue 35' />
+  <meta property="og:description" content='Admin Styling App, Algolia Sync, Admin Theme, Redactor Editor Customisation, Perch Production Modes, Managing Content with Runway, Site Examples' />
+  <meta property="og:type" content='article' />
+  <meta property="og:url" content='https://perchology.curated.co/issues/35' />
+</head>
+<body>
+<header class="header" role="banner">
+  <div class="navbar" role="navigation">
+    <div class="i">
+      <div class="navbar-collapse">
+        <a class="navbar-a" href="/blog/">Blog</a>
+        <a class="navbar-a" href="../../archives/1/index.html">Archives</a>
+        <a class="navbar-a" href="../../sponsorship/index.html">Sponsorship</a>
+      </div>
+      <a class="navbar-a navbar-brand" href="/">
+        Perchology
+      </a>
+      <button class="navbar-a navbar-toggle"><span class="sr-only">Toggle Menu</span><span class="navbar-toggle-bar"></span><span class="navbar-toggle-bar"></span><span class="icon icon-cross"></span></button>
+    </div>
+  </div>
+    <div class="intro intro--description ">
+    <div class="i">
+      <p>Every few weeks. A curated publication full of interesting, relevant links about Perch CMS. Subscribe now and never miss an issue.</p>
+    </div>
+  </div>
+
+</header>
+
+
+
+<article class="issue" id="start">
+  <header class="issue__heading">
+    <div class="i">
+      <h1><a href="../../issues/35/index.html#start">
+        Issue 35 &nbsp;<i><time class='published' datetime='2018-01-11'>11th January 2018</time></i>
+      </a></h1>
+    </div>
+  </header>
+  <div class="issue__body">
+      <section class="category cc-introduction">
+        <div class="i" id="introduction">
+          <h2 class="category__title"><span class="category__title__text">Introduction</span></h2>
+            <div class="item item--issue">
+  <a name="t-339525"></a>
+  
+  <h3 class="item__title">Happy New Year Everyone!</h3>
+    <p>I hope you had a great holiday season. I spent part of it staying in my friends' hotel in Cornwall on the rugged south west coast of the UK. It was a fab break!</p>
+
+<p>In this issue, there's a new app for styling Perch admin and a useful, simple, Redactor customisation config file. There have been quite a few posts about Redactor editor customisation on the Perch Forum so this config file might be just what you need.</p>
+
+<p>Also, if you missed it last time, here's a link to join <a href="https://join.slack.com/t/perchology/shared_invite/enQtMjg5MjE1NDkzMTExLTIzOWY0ODc5YjkwZWYyODk3NDA1ZmU3MWIwMmRlNmMzNGQ2Zjg2NzJmMjUyYzM4YjU2MDk4MTIyODNjMjI0ZWU">Perchology Slack</a> which is a community chat for Perchers. It's a replacement for the Perch Chat Slack which closed at the end of last year.</p>
+
+<p>See you next time.</p>
+  <span class="item__footer">Clive Walker - Perchology</span>
+</div>
+
+        </div>
+      </section>
+
+      <section class="category cc-addons">
+        <div class="i" id="addons">
+          <h2 class="category__title"><span class="category__title__text">Add-Ons</span></h2>
+            <div class="item item--issue item--link">
+  <a name="tw5oAqe"></a>
+  
+  <h3 class="item__title"><a href="https://github.com/JayGeorge/jaygeorge_perch_admin_style">Admin Styling App for Perch admin</a></h3>
+    <blockquote><p>This is a very simple App which allows you to style the admin interface for different clients.</p></blockquote>
+  <span class="item__footer"><a href="https://github.com/JayGeorge/jaygeorge_perch_admin_style">github.com</a></span>
+</div>
+
+              <hr class="item__line"/>
+            <div class="item item--issue item--link">
+  <a name="7HPbKTn"></a>
+  
+  <h3 class="item__title"><a href="https://github.com/JayGeorge/jaygeorge_perch_algolia_sync">Perch Algolia Sync App </a></h3>
+    <p>Algolia provides an autocomplete search function for sites. This app does not provide the front end code but syncs your Perch site with Algolia via its API.</p>
+  <span class="item__footer"><a href="https://github.com/JayGeorge/jaygeorge_perch_algolia_sync">github.com</a></span>
+</div>
+
+        </div>
+      </section>
+
+      <section class="category cc-code">
+        <div class="i" id="code">
+          <h2 class="category__title"><span class="category__title__text">Code</span></h2>
+            <div class="item item--issue item--link">
+  <a name="WW4wgJj"></a>
+  
+  <h3 class="item__title"><a href="https://github.com/ex-jedi/perch-redactor-config.js">Customisation file for the Perch CMS Redactor text editor.</a></h3>
+    <p>A good example of custom modification of Redactor editor. Shows how to add specific editor buttons.</p>
+  <span class="item__footer"><a href="https://github.com/ex-jedi/perch-redactor-config.js">github.com</a></span>
+</div>
+
+              <hr class="item__line"/>
+            <div class="item item--issue item--link">
+  <a name="NCnUkvL"></a>
+  
+  <h3 class="item__title"><a href="https://github.com/ex-jedi/perch-admin-theme">Perch admin theme.</a></h3>
+    <p>This theme uses Google's Open Sans font and adds more contrast and visual hierarchy to the Perch UI.</p>
+  <span class="item__footer"><a href="https://github.com/ex-jedi/perch-admin-theme">github.com</a></span>
+</div>
+
+        </div>
+      </section>
+
+      <section class="category cc-howdoi">
+        <div class="i" id="howdoi">
+          <h2 class="category__title"><span class="category__title__text">How Do I?</span></h2>
+            <div class="item item--issue item--link">
+  <a name="FcH88Ww"></a>
+  
+  <h3 class="item__title"><a href="https://grabapipit.com/blog/utilise-perch-production-modes/">Utilise Perch Production Modes</a></h3>
+    <p>Here's how to use different production modes for each hosting environment and how to check for the mode in your pages. For example, this could be used to include Google Analytics scripts only on the live site and not on local or staging sites.</p>
+  <span class="item__footer"><a href="https://grabapipit.com/blog/utilise-perch-production-modes/">grabapipit.com</a></span>
+</div>
+
+        </div>
+      </section>
+
+      <section class="category cc-videos">
+        <div class="i" id="videos">
+          <h2 class="category__title"><span class="category__title__text">Videos</span></h2>
+            <div class="item item--issue item--link">
+  <a name="P688RE4"></a>
+  
+  <h3 class="item__title"><a href="https://www.youtube.com/watch?v=YAd0-JbMqUw">Perch Runway - Managing Content - YouTube</a></h3>
+    <p>In this new video, Drew from Perch describes two approaches to managing content with Perch Runway. Editing on a page-by-page basis and using Collections.</p>
+  <span class="item__footer"><a href="https://www.youtube.com/watch?v=YAd0-JbMqUw">youtube.com</a></span>
+</div>
+
+        </div>
+      </section>
+
+      <section class="category cc-siteexamples">
+        <div class="i" id="siteexamples">
+          <h2 class="category__title"><span class="category__title__text">Site Examples</span></h2>
+            <div class="item item--issue item--link">
+  <a name="p6Dltw8"></a>
+  
+  <h3 class="item__title"><a href="https://jonesclocks.com/">Jones Clocks</a></h3>
+    <p>A Perch Shop site using Stripe as payment processor.</p>
+  <span class="item__footer"><a href="https://jonesclocks.com/">jonesclocks.com</a></span>
+</div>
+
+              <hr class="item__line"/>
+            <div class="item item--issue item--link">
+  <a name="kUqyxx5"></a>
+  
+  <h3 class="item__title"><a href="http://stafford-decking.co.uk/">Stafford Decking and Landscape Maintenance Specialists</a></h3>
+    <p></p>
+  <span class="item__footer"><a href="http://stafford-decking.co.uk/">stafford-decking.co.uk</a></span>
+</div>
+
+        </div>
+      </section>
+
+      <section class="category cc-spn">
+        <div class="i" id="sponsored">
+          <h2 class="category__title"><span class="category__title__text">Sponsor</span></h2>
+            <div class="item item--issue item--link">
+  <a name="hfVCbtu"></a>
+  
+  <h3 class="item__title"><a rel="nofollow" href="https://www.cvwdesign.co.uk/perch-cms-development/">CVW Web Design</a></h3>
+    <p>Hire me to help with Perch on your site.</p>
+  <span class="item__footer"><a rel="nofollow" href="https://www.cvwdesign.co.uk/perch-cms-development/">cvwdesign.co.uk</a></span>
+</div>
+
+        </div>
+      </section>
+        <aside class="category__footer cc-spn">
+          <div class="i">
+            <h2><a href="../../sponsorship/index.html">Support the Perchology Newsletter by becoming a sponsor!</a></h2>
+          </div>
+        </aside>
+
+  </div>
+</article>
+
+<div class="issue__pager">
+  <ul class="i">
+    <li class="previous">
+      <a href="../../issues/34/index.html#start">
+        <span class="icon icon-angle-left"></span>
+        <span class="issue__pager__text">
+          <span class="issue__pager__label">Previous issue</span>
+          <time class='published' datetime='2017-12-20'>20th December 2017</time>
+        </span>
+</a>    </li>
+    <li class="issue__pager__summary"><span>35 of 70</span></li>
+    <li class="next">
+      <a href="../../issues/36/index.html#start">
+        <span class="issue__pager__text">
+          <span class="issue__pager__label">Next issue</span>
+          <time class='published' datetime='2018-02-01'>1st February 2018</time>
+        </span>
+        <span class="icon icon-angle-right"></span>
+</a>    </li>
+  </ul>
+</div>
+
+
+
+<footer class="footer">
+  <div class="i">
+    <p>
+      &copy;2016-2020 Perchology
+        | <a href="../../sponsorship/index.html">Sponsorship</a>
+        | Perchology is curated by Clive Walker.
+    </p>
+  </div>
+</footer>
+
+
+</body>
+</html>
+
