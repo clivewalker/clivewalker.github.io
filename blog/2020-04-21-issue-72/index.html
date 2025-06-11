@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html class=" no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Title and Description -->
+    <title>Issue 72</title>
+    <meta name="description" content="Perch Templating with Third Party Data, Perch:if and Tag Attributes, Global Blocks, Google Sheets Data in Perch, Blog Post &amp; Page Select Field Types, Next and Previous Blog Post Links, Site Example"/>
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Perchology"/>
+    <meta property="og:url" content="https://www.perchology.com/blog/2020-04-21-issue-72"/>
+    <meta property="og:title" content="Issue 72"/>
+    <meta property="og:description" content="Perch Templating with Third Party Data, Perch:if and Tag Attributes, Global Blocks, Google Sheets Data in Perch, Blog Post &amp; Page Select Field Types, Next and Previous Blog Post Links, Site Example"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:author" content=""/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@perchology"/>
+    <meta name="twitter:title" content="Issue 72"/>
+    <meta name="twitter:description" content="Perch Templating with Third Party Data, Perch:if and Tag Attributes, Global Blocks, Google Sheets Data in Perch, Blog Post &amp; Page Select Field Types, Next and Previous Blog Post Links, Site Example"/>
+    <meta name="twitter:url" content="https://www.perchology.com/blog/2020-04-21-issue-72"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic" rel="stylesheet">
+
+    <link href="/issues/assets/publication/themes/public_1/application.css" media="all" rel="stylesheet"/>
+    <link href="/issues/assets/stylesheet.css" media="all" rel="stylesheet"/>
+    <script src="/issues/assets/publication/themes/public_1/application.js"></script>
+    <style>
+    body {
+        font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif
+    }
+
+    .category__title, .issue__heading, .issue__pager__text time, .page__header {
+        font-family: Merriweather, Georgia, 'Times New Roman', Times, serif
+    }
+
+    .item__title a {
+        color:#69c
+    }
+
+    .issue__heading h1 {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 1rem;
+        text-transform:unset
+    }
+
+    .meta i {
+        color:rgba(69, 69, 71, .7)
+    }
+
+    .category .item--issue blockquote {
+        border-left:5px solid #ccc
+    }
+
+    pre {
+        font-size: .9em;
+        padding: .5rem;
+        background: #6699cc1c;
+        margin-bottom: 1rem;
+        white-space:break-spaces
+    }
+
+    .summary {
+        font-size: 120%;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 1rem
+    }
+    </style>
+</head>
+<body class="post">
+    <header class="header" role="banner">
+        <div class="navbar" role="navigation">
+            <div class="i">
+                <div class="navbar-collapse">
+                    <a class="navbar-a" href="/blog/">Blog</a>
+                    <a class="navbar-a" href="/issues/archives/1/index.html">Archives</a>
+                    <a class="navbar-a" href="/issues/sponsorship/index.html">Sponsorship</a>
+                </div>
+                <a class="navbar-a navbar-brand" href="/">
+                        Perchology
+                      </a>
+                <button class="navbar-a navbar-toggle">
+                    <span class="sr-only">Toggle Menu</span>
+                    <span class="navbar-toggle-bar"></span>
+                    <span class="navbar-toggle-bar"></span>
+                    <span class="icon icon-cross"></span>
+                </button>
+            </div>
+        </div>
+        <div class="intro intro--description ">
+            <div class="i">
+                <h1>The Newsletter has closed. But, here's one of the Issues</h1>
+                <!-- <h1>It <em>used</em> to be every few weeks. A curated publication full of interesting, relevant links about Perch CMS. But, it's no more. Here are the posts and issues of the Perchology Newsletter.</h1> -->
+            </div>
+        </div>
+
+    </header>
+    <article class="issue" id="start">
+        <header class="issue__heading">
+            <div class="i">
+                <h1>Issue 72 </h1>
+                <p class="meta">
+                    <i>
+                        <time class='published' datetime="2020-04-21 09:00:00">21 April 2020</time>
+                    </i>
+
+                          
+                                by 
+                    <i>
+                        <span class="p-author h-card">Clive Walker</span>
+                    </i>
+                </p>
+
+            </div>
+        </header>
+        <div class="issue__body">
+            <section class="category cc-introduction">
+                <div class="i" id="introduction">
+                    <h2 class="category__title">
+                        <span class="category__title__text">
+                                        Hi folks
+                                    </span>
+                    </h2>
+                    <div class="item item--issue">
+                        <p>
+                            It's been a busy few weeks collecting some fab links about Perch. And, I've even published a 
+                            <a href="/blog/2020-04-14-how-to-add-next-and-previous-blog-post-links-with-perch">blog post</a>
+                             on the Perchology site :-)
+                        </p>
+                        <p>And, there have been some great discussions in the Perchology Slack group. Let me know if you want to join.</p>
+                        <p>
+                            I worked from home (WFH) for a long time before joining a coworking space in recent years. So, coming back to a WFH routine hasn't been too difficult for me. I appreciate that not everyone is in this situation though and I hope that you are adapting to the coronavirus restrictions wherever you are.
+                            <br>
+                        </p>
+                        <p>Stay safe everyone.</p>
+                        <div class="item__footer">
+                            <p>Clive Walker - Perchology</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="i">
+                <h2 class="category__title">
+                    <span class="category__title__text">
+                         Tips and Tricks
+                    </span>
+                </h2>
+            </div>
+
+            <section class="category">
+                <div class="i">
+
+                    <div class="item item--issue item--link">
+                        <h3 class="item__title">
+                            <a href="https://www.chopperoon.com/blog/perch-templating-using-third-party-data">Perch Templating using Third Party Data</a>
+                        </h3>
+                        <blockquote>I’ve just finished integrating a third party real estate CRM on a client project. The CRM stores all of the properties and property info and they provide an API to pull in the data needed to generate the property listings and detail pages [in Perch].</blockquote>
+                        <div class="item__footer">
+                            <p>
+                                <a href="https://www.chopperoon.com/blog/perch-templating-using-third-party-data">chopperoon.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item item--issue item--link">
+                        <h3 class="item__title">
+                            <a href="https://grabapipit.com/blog/a-perchif-diet">A Perch:if Diet</a>
+                        </h3>
+                        <blockquote>
+                            Perch’s conditional tags is a powerful feature of its templating engine. Yet, you can in some cases replicate the outcome of 
+                            <code>perch:if</code>
+                             tags with tag attributes and write less code in the process.
+                        </blockquote>
+                        <div class="item__footer">
+                            <p>
+                                <a href="https://grabapipit.com/blog/a-perchif-diet">grabapipit.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item item--issue item--link">
+                        <h3 class="item__title">
+                            <a href="https://grabapipit.com/blog/a-global-block">A Global Block</a>
+                        </h3>
+                        <p>Using Perch Blocks with layout includes means that you can give editors the ability to add global sections. The content can come from anywhere; a collection, a content region or an add-on like Perch Blog and Perch Shop.</p>
+                        <div class="item__footer">
+                            <p>
+                                <a href="https://grabapipit.com/blog/a-global-block">grabapipit.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <div class="i">
+                <h2 class="category__title">
+                    <span class="category__title__text">
+                         Add-Ons
+                    </span>
+                </h2>
+            </div>
+
+            <section class="category">
+                <div class="i">
+
+                    <div class="item item--issue item--link">
+                        <h3 class="item__title">
+                            <a href="https://gitlab.com/cognetif-os/perch-dev/cognetif_blogpostselect">Cognetif BlogPostSelect</a>
+                        </h3>
+                        <p>Field type to select a blog post from the Perch Blog app and return a property.</p>
+                        <div class="item__footer">
+                            <p>
+                                <a href="https://gitlab.com/cognetif-os/perch-dev/cognetif_blogpostselect">gitlab.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item item--issue item--link">
+                        <h3 class="item__title">
+                            <a href="https://github.com/ryangittings/rg-sheets">RG Sheets</a>
+                        </h3>
+                        <p>This app will allow you to import data from a Google sheet, into a specified Perch collection. The app uses Perch's scheduled tasks in order to import the data. This can be configured within the app.</p>
+                        <div class="item__footer">
+                            <p>
+                                <a href="https://github.com/ryangittings/rg-sheets">github.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item item--issue item--link">
+                        <h3 class="item__title">
+                            <a href="https://gitlab.com/cognetif-os/perch-dev/cognetif_pageselect">Cognetif PageSelect</a>
+                        </h3>
+                        <p>Field type to select a page from the page list and return a property.</p>
+                        <div class="item__footer">
+                            <p>
+                                <a href="https://gitlab.com/cognetif-os/perch-dev/cognetif_pageselect">gitlab.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <div class="i">
+                <h2 class="category__title">
+                    <span class="category__title__text">
+                         How Do I
+                    </span>
+                </h2>
+            </div>
+
+            <section class="category">
+                <div class="i">
+
+                    <div class="item item--issue item--link">
+                        <h3 class="item__title">
+                            <a href="https://www.perchology.com/blog/2020-04-14-how-to-add-next-and-previous-blog-post-links-with-perch">How to Add Next and Previous Blog Post Links with Perch</a>
+                        </h3>
+                        <p>
+                            Use three queries to get data from the current post 
+                            <em>and</em>
+                             next and previous posts in order to display Next and Previous post links.
+                        </p>
+                        <div class="item__footer">
+                            <p>
+                                <a href="https://www.perchology.com/blog/2020-04-14-how-to-add-next-and-previous-blog-post-links-with-perch">perchology.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <div class="i">
+                <h2 class="category__title">
+                    <span class="category__title__text">
+                         Site Examples
+                    </span>
+                </h2>
+            </div>
+
+            <section class="category">
+                <div class="i">
+
+                    <div class="item item--issue item--link">
+                        <h3 class="item__title">
+                            <a href="https://reflectivecoaching.net/">Reflective Coaching</a>
+                        </h3>
+                        <blockquote>Reflective Coaching provides business coaching & personal development coaching services. We utilize a cutting edge approach called Reflective Questioning.</blockquote>
+                        <div class="item__footer">
+                            <p>
+                                <a href="https://reflectivecoaching.net/">reflectivecoaching.net</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <aside class="category__footer cc-spn">
+                <div class="i">
+                    <h2>
+                        <a href="/issues/sponsorship/index.html">Support the Perchology Newsletter by becoming a sponsor!</a>
+                    </h2>
+                </div>
+            </aside>
+        </div>
+    </article>
+
+    <div class="issue__pager">
+        <ul class="i">
+            <li class="previous">
+                <a href="/blog/2020-04-14-how-to-add-next-and-previous-blog-post-links-with-perch" class="prev">
+                    How to Add Next and Previous Blog Post Links with Perch
+                        	
+                    <span class="icon icon-angle-left"></span>
+                    <span class="issue__pager__text">
+                        <!-- <span class="issue__pager__label">Previous Post</span> -->
+                        <time class='published' datetime="2020-04-14 11:00:00">14 April 2020</time>
+                    </span>
+                </a>
+            </li>
+            <li class="next">
+                <a href="/blog/2020-05-05-issue-73" class="prev">
+                    Issue 73
+                        	
+                    <span class="issue__pager__text">
+                        <!-- <span class="issue__pager__label">Next Post</span> -->
+                        <time class='published' datetime="2020-05-05 12:00:00">05 May 2020</time>
+                    </span>
+                    <span class="icon icon-angle-right"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <footer class="footer">
+        <div class="i">
+            <p>
+
+                      &copy;2016-2025 Perchology | 
+                <a href="/issues/sponsorship/index.html">Sponsorship</a>
+                 | Perchology is made by 
+                <a href="https://www.cvwdesign.co.uk/">Clive Walker</a>
+                .
+                    
+            </p>
+            <p>
+                <a href="https://grabaperch.com">Perch</a>
+                 is a product by Perch Runway Limited
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
+

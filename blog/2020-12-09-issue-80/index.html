@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html class=" no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Title and Description -->
+    <title>Issue 80</title>
+    <meta name="description" content="Stripe SCA Compliance, Pipit Members 1.3.0, Perchology Links, Visual Studio Code Snippets, Pagination Tags, Site Example"/>
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Perchology"/>
+    <meta property="og:url" content="https://www.perchology.com/blog/2020-12-09-issue-80"/>
+    <meta property="og:title" content="Issue 80"/>
+    <meta property="og:description" content="Stripe SCA Compliance, Pipit Members 1.3.0, Perchology Links, Visual Studio Code Snippets, Pagination Tags, Site Example"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:author" content=""/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@perchology"/>
+    <meta name="twitter:title" content="Issue 80"/>
+    <meta name="twitter:description" content="Stripe SCA Compliance, Pipit Members 1.3.0, Perchology Links, Visual Studio Code Snippets, Pagination Tags, Site Example"/>
+    <meta name="twitter:url" content="https://www.perchology.com/blog/2020-12-09-issue-80"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic" rel="stylesheet">
+
+    <link href="/issues/assets/publication/themes/public_1/application.css" media="all" rel="stylesheet"/>
+    <link href="/issues/assets/stylesheet.css" media="all" rel="stylesheet"/>
+    <script src="/issues/assets/publication/themes/public_1/application.js"></script>
+    <style>
+    body {
+        font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif
+    }
+
+    .category__title, .issue__heading, .issue__pager__text time, .page__header {
+        font-family: Merriweather, Georgia, 'Times New Roman', Times, serif
+    }
+
+    .item__title a {
+        color:#69c
+    }
+
+    .issue__heading h1 {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 1rem;
+        text-transform:unset
+    }
+
+    .meta i {
+        color:rgba(69, 69, 71, .7)
+    }
+
+    .category .item--issue blockquote {
+        border-left:5px solid #ccc
+    }
+
+    pre {
+        font-size: .9em;
+        padding: .5rem;
+        background: #6699cc1c;
+        margin-bottom: 1rem;
+        white-space:break-spaces
+    }
+
+    .summary {
+        font-size: 120%;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 1rem
+    }
+    </style>
+</head>
+<body class="post">
+    <header class="header" role="banner">
+        <div class="navbar" role="navigation">
+            <div class="i">
+                <div class="navbar-collapse">
+                    <a class="navbar-a" href="/blog/">Blog</a>
+                    <a class="navbar-a" href="/issues/archives/1/index.html">Archives</a>
+                    <a class="navbar-a" href="/issues/sponsorship/index.html">Sponsorship</a>
+                </div>
+                <a class="navbar-a navbar-brand" href="/">
+                        Perchology
+                      </a>
+                <button class="navbar-a navbar-toggle">
+                    <span class="sr-only">Toggle Menu</span>
+                    <span class="navbar-toggle-bar"></span>
+                    <span class="navbar-toggle-bar"></span>
+                    <span class="icon icon-cross"></span>
+                </button>
+            </div>
+        </div>
+        <div class="intro intro--description ">
+            <div class="i">
+                <h1>The Newsletter has closed. But, here's one of the Issues</h1>
+                <!-- <h1>It <em>used</em> to be every few weeks. A curated publication full of interesting, relevant links about Perch CMS. But, it's no more. Here are the posts and issues of the Perchology Newsletter.</h1> -->
+            </div>
+        </div>
+
+    </header>
+    <article class="issue" id="start">
+        <header class="issue__heading">
+            <div class="i">
+                <h1>Issue 80 </h1>
+                <p class="meta">
+                    <i>
+                        <time class='published' datetime="2020-12-09 12:20:00">09 December 2020</time>
+                    </i>
+
+                          
+                                by 
+                    <i>
+                        <span class="p-author h-card">Clive Walker</span>
+                    </i>
+                </p>
+
+            </div>
+        </header>
+        <div class="issue__body">
+            <section class="category cc-introduction">
+                <div class="i" id="introduction">
+                    <h2 class="category__title">
+                        <span class="category__title__text">
+                                        Hi everyone
+                                    </span>
+                    </h2>
+                    <div class="item item--issue">
+                        <p>
+                            This is the last Perchology Newsletter of 2020. Well,&nbsp;unless there is any end-of-year news from the Perch core team about future development! There have been 13 issues this year and I've enjoyed curating them.&nbsp;
+                            <br>
+                        </p>
+                        <p>It's been a tough year for many reasons for lots of people.&nbsp;I'm looking forward to 2021 for sure.</p>
+                        <p>
+                            There are COVID-19 restrictions in place in most countries but&nbsp;I wish you all the best for the holiday season.
+                            <br>
+                        </p>
+                        <div class="item__footer">
+                            <p>Clive Walker - Perchology</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="i">
+                <h2 class="category__title">
+                    <span class="category__title__text">
+                         Add-ons
+                    </span>
+                </h2>
+            </div>
+
+            <section class="category">
+                <div class="i">
+
+                    <div class="item item--issue item--link">
+                        <h3 class="item__title">
+                            <a href="https://github.com/RootStudio/Root-Perch-Shop-Omnipay-v3">Stripe SCA Compliance using Root Perch Shop Omnipay</a>
+                        </h3>
+                        <p>This is a third-party&nbsp;update to the gateways for Perch Shop to enable use of the latest Stripe Omnipay gateway&nbsp;(for Stripe SCA Compliance).</p>
+                        <div class="item__footer">
+                            <p>
+                                <a href="https://github.com/RootStudio/Root-Perch-Shop-Omnipay-v3">github.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item item--issue item--link">
+                        <h3 class="item__title">
+                            <a href="https://grabapipit.com/news/pipit-members-v1-30-export-member-details">Pipit Members 1.3.0</a>
+                        </h3>
+                        <p>The latest version of the Pipit Members App makes it easy to&nbsp;export member details to a CSV file from the Perch Members control panel (the app adds an export&nbsp;button to the members list page).</p>
+                        <div class="item__footer">
+                            <p>
+                                <a href="https://grabapipit.com/news/pipit-members-v1-30-export-member-details">grabapipit.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item item--issue item--link">
+                        <h3 class="item__title">
+                            <a href="https://github.com/clivewalker/Perchology-links">Perchology Links</a>
+                        </h3>
+                        <p>A list of Perch add-ons by third-party developers. Includes apps, field types, dashboard widgets, plugins, template filters and admin themes.</p>
+                        <div class="item__footer">
+                            <p>
+                                <a href="https://github.com/clivewalker/Perchology-links">github.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <div class="i">
+                <h2 class="category__title">
+                    <span class="category__title__text">
+                         Tools
+                    </span>
+                </h2>
+            </div>
+
+            <section class="category">
+                <div class="i">
+
+                    <div class="item item--issue item--link">
+                        <h3 class="item__title">
+                            <a href="https://github.com/clivewalker/Perch-VS-Code-Snippets">Perch Visual Studio Code Snippets</a>
+                        </h3>
+                        <p>Snippets for Perch template tags and functions. Easy to set up in Visual Studio Code.</p>
+                        <p>In VS Code - go to Preferences - User Snippets. Create a new Snippets file and copy and paste the contents of perch.code-snippets into that.</p>
+                        <div class="item__footer">
+                            <p>
+                                <a href="https://github.com/clivewalker/Perch-VS-Code-Snippets">github.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <div class="i">
+                <h2 class="category__title">
+                    <span class="category__title__text">
+                         In The Docs
+                    </span>
+                </h2>
+            </div>
+
+            <section class="category">
+                <div class="i">
+
+                    <div class="item item--issue item--link">
+                        <h3 class="item__title">
+                            <a href="https://docs.grabaperch.com/templates/pagination/">Pagination Tags</a>
+                        </h3>
+                        <p>
+                            When using 
+                            <code>perch_content_custom()</code>
+                             to paginate the returned data you must also add some markup to your template to display pagination. This markup makes use of a number of special 
+                            <code>id</code>
+                             values.
+                        </p>
+                        <div class="item__footer">
+                            <p>
+                                <a href="https://docs.grabaperch.com/templates/pagination/">docs.grabaperch.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <div class="i">
+                <h2 class="category__title">
+                    <span class="category__title__text">
+                         Site Example
+                    </span>
+                </h2>
+            </div>
+
+            <section class="category">
+                <div class="i">
+
+                    <div class="item item--issue item--link">
+                        <h3 class="item__title">
+                            <a href="https://mcamsyamaha.com/">McAMS Yamaha</a>
+                        </h3>
+                        <blockquote>Site design and build for Yamaha’s Official British Superbike Team. Built with standard Perch it includes custom events section which utilises categories for common content like circuits for ease of update in future seasons. Blog/Gallery apps used for the news and photos sections. The news section back-end template includes the ability to add blocks for quotes from riders/team and event results. Riders are available as categories for selection in the results block which makes it fast to add results, this was important for the client on busy race weekends. A joy to work in Perch on this one and the client is really pleased with the ease of updating the site having previously been built using another CMS.</blockquote>
+                        <p>Very nice site!</p>
+                        <div class="item__footer">
+                            <p>
+                                <a href="https://mcamsyamaha.com/">mcamsyamaha.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <aside class="category__footer cc-spn">
+                <div class="i">
+                    <h2>
+                        <a href="/issues/sponsorship/index.html">Support the Perchology Newsletter by becoming a sponsor!</a>
+                    </h2>
+                </div>
+            </aside>
+        </div>
+    </article>
+
+    <div class="issue__pager">
+        <ul class="i">
+            <li class="previous">
+                <a href="/blog/2020-11-05-issue-79" class="prev">
+                    Issue 79
+                        	
+                    <span class="icon icon-angle-left"></span>
+                    <span class="issue__pager__text">
+                        <!-- <span class="issue__pager__label">Previous Post</span> -->
+                        <time class='published' datetime="2020-11-05 11:12:00">05 November 2020</time>
+                    </span>
+                </a>
+            </li>
+            <li class="next">
+                <a href="/blog/2021-01-08-issue-81" class="prev">
+                    Issue 81
+                        	
+                    <span class="issue__pager__text">
+                        <!-- <span class="issue__pager__label">Next Post</span> -->
+                        <time class='published' datetime="2021-01-08 08:00:00">08 January 2021</time>
+                    </span>
+                    <span class="icon icon-angle-right"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <footer class="footer">
+        <div class="i">
+            <p>
+
+                      &copy;2016-2025 Perchology | 
+                <a href="/issues/sponsorship/index.html">Sponsorship</a>
+                 | Perchology is made by 
+                <a href="https://www.cvwdesign.co.uk/">Clive Walker</a>
+                .
+                    
+            </p>
+            <p>
+                <a href="https://grabaperch.com">Perch</a>
+                 is a product by Perch Runway Limited
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
+

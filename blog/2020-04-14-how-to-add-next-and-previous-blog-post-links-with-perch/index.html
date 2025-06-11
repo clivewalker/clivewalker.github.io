@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class=" no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Title and Description -->
+    <title>How to Add Next and Previous Blog Post Links with Perch</title>
+    <meta name="description" content=""/>
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Perchology"/>
+    <meta property="og:url" content="https://www.perchology.com/blog/2020-04-14-how-to-add-next-and-previous-blog-post-links-with-perch"/>
+    <meta property="og:title" content="How to Add Next and Previous Blog Post Links with Perch"/>
+    <meta property="og:description" content="Use three queries to get data from the current post and next and previous posts in order to display Next and Previous post links."/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:author" content=""/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@perchology"/>
+    <meta name="twitter:title" content="How to Add Next and Previous Blog Post Links with Perch"/>
+    <meta name="twitter:description" content="Use three queries to get data from the current post and next and previous posts in order to display Next and Previous post links."/>
+    <meta name="twitter:url" content="https://www.perchology.com/blog/2020-04-14-how-to-add-next-and-previous-blog-post-links-with-perch"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic" rel="stylesheet">
+
+    <link href="/issues/assets/publication/themes/public_1/application.css" media="all" rel="stylesheet"/>
+    <link href="/issues/assets/stylesheet.css" media="all" rel="stylesheet"/>
+    <script src="/issues/assets/publication/themes/public_1/application.js"></script>
+    <style>
+    body {
+        font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif
+    }
+
+    .category__title, .issue__heading, .issue__pager__text time, .page__header {
+        font-family: Merriweather, Georgia, 'Times New Roman', Times, serif
+    }
+
+    .item__title a {
+        color:#69c
+    }
+
+    .issue__heading h1 {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 1rem;
+        text-transform:unset
+    }
+
+    .meta i {
+        color:rgba(69, 69, 71, .7)
+    }
+
+    .category .item--issue blockquote {
+        border-left:5px solid #ccc
+    }
+
+    pre {
+        font-size: .9em;
+        padding: .5rem;
+        background: #6699cc1c;
+        margin-bottom: 1rem;
+        white-space:break-spaces
+    }
+
+    .summary {
+        font-size: 120%;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 1rem
+    }
+    </style>
+</head>
+<body class="post">
+    <header class="header" role="banner">
+        <div class="navbar" role="navigation">
+            <div class="i">
+                <div class="navbar-collapse">
+                    <a class="navbar-a" href="/blog/">Blog</a>
+                    <a class="navbar-a" href="/issues/archives/1/index.html">Archives</a>
+                    <a class="navbar-a" href="/issues/sponsorship/index.html">Sponsorship</a>
+                </div>
+                <a class="navbar-a navbar-brand" href="/">
+                        Perchology
+                      </a>
+                <button class="navbar-a navbar-toggle">
+                    <span class="sr-only">Toggle Menu</span>
+                    <span class="navbar-toggle-bar"></span>
+                    <span class="navbar-toggle-bar"></span>
+                    <span class="icon icon-cross"></span>
+                </button>
+            </div>
+        </div>
+        <div class="intro intro--description ">
+            <div class="i">
+                <h1>The Newsletter has closed. But, here's one of the Issues</h1>
+                <!-- <h1>It <em>used</em> to be every few weeks. A curated publication full of interesting, relevant links about Perch CMS. But, it's no more. Here are the posts and issues of the Perchology Newsletter.</h1> -->
+            </div>
+        </div>
+
+    </header>
+    <article class="issue" id="start">
+        <header class="issue__heading">
+            <div class="i">
+                <h1 class="p-name">
+                         How to Add Next and Previous Blog Post Links with Perch
+                    </h1>
+                <p class="meta">
+                    <i>
+                        <time class="dt-published" datetime="2020-04-14 11:00:00">
+                                    14 April 2020 
+                                </time>
+                    </i>
+
+                            
+                                by 
+                    <i>
+                        <span class="p-author h-card">Clive Walker</span>
+                    </i>
+
+                </p>
+            </div>
+        </header>
+
+        <div class="description e-content i">
+
+            <p class="summary">
+                Use three queries to get data from the current post 
+                <em>and</em>
+                 next and previous posts in order to display Next and Previous post links.
+            </p>
+            <p>Here's the code I use to add Next and Previous Post  links to each blog post on this site. I've used this on a few sites and it's been described in different ways on the old Perch forum. But, I thought it would be useful to pull it together here.</p>
+            <p>
+                Firstly, near the top of my page, we use 
+                <code>perch_blog_custom</code>
+                 to get the current post's data.
+            </p>
+
+            <pre>
+                <code>// get the post data, put it into $post variable
+                $post = perch_blog_custom([
+                  'filter'        =&gt; 'postSlug',
+                  'match'         =&gt; 'eq',
+                  'value'         =&gt; perch_get('s'),
+                  'skip-template' =&gt; true,
+                  'return-html'   =&gt; true
+                ]);
+
+                // write the values from the array stored in $post to variables
+                  $date  = $post[0]['postDateTime'];
+                  $html   = $post['html'];</code>
+            </pre>
+
+            <p>
+                Now, I need to get the data from next and previous posts so that I can use this in the Next and Previous Links. I put this data into 
+                <code>$next</code>
+                 and 
+                <code>$prev</code>
+                 variables:
+                <br>
+            </p>
+
+            <pre>
+                <code>$prev = perch_blog_custom([
+                      'count'=&gt;1,
+                      'filter'=&gt;'postDateTime',
+                      'match'=&gt;'lt',
+                      'sort'=&gt;'postDateTime',
+                      'sort-order'=&gt;'DESC',
+                      'value'=&gt;$date,
+                      'template'=&gt;'blog/post_prev.html'
+                        ], true); // stores prev post in a variable to use later
+                       
+                $next = perch_blog_custom([
+                      'count'=&gt;1,
+                      'filter'=&gt;'postDateTime',
+                      'match'=&gt;'gt',
+                      'sort'=&gt;'postDateTime',
+                      'sort-order'=&gt;'ASC',
+                      'value'=&gt;$date,
+                      'template'=&gt;'blog/post_next.html'
+                      ], true); // stores next post in a variable to use later</code>
+            </pre>
+
+            <p>
+                The Next and Previous templates in the above are similar. Here's a simplified version of my 
+                <code>blog/post_next.html</code>
+                 template.
+            </p>
+
+            <pre>
+                <code>&lt;li class="next"&gt;
+                    	&lt;a href="/blog/&lt;perch:blog id="postSlug" /&gt;" class="prev"&gt;&lt;perch:blog id="postTitle" /&gt;
+                    	     	&lt;time class='published' datetime="&lt;perch:blog id="postDateTime" type="date" label="Date" time="true" format="Y-m-d H:i:s" /&gt;"&gt;
+                &lt;perch:blog id="postDateTime" type="date" time="true" format="%d %B %Y" /&gt;&lt;/time&gt; 
+                    	&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;</code>
+            </pre>
+
+            <p>
+                Finally, on my page, I can output the post and the Next and Previous Post links like this:
+                <br>
+            </p>
+
+            <pre>
+                <code>echo $html; // the post
+
+                // Previous and next post navigation
+                  if (empty($prev)){
+                          echo '&lt;ul&gt;';
+                    } else {
+                          echo $prev;
+                    }
+                  if (empty($next)){
+                      echo '&lt;/ul&gt;';
+                    } else {
+                          echo $next;
+                  }</code>
+            </pre>
+
+            <p>
+                OK, that's it!
+                <br>
+            </p>
+            <p>You should be able to  see at least the Previous Post link below.&nbsp;</p>
+
+        </div>
+    </article>
+
+    <div class="issue__pager">
+        <ul class="i">
+            <li class="previous">
+                <a href="/blog/2020-04-03-issue-71" class="prev">
+                    Issue 71
+                        	
+                    <span class="icon icon-angle-left"></span>
+                    <span class="issue__pager__text">
+                        <!-- <span class="issue__pager__label">Previous Post</span> -->
+                        <time class='published' datetime="2020-04-03 09:46:00">03 April 2020</time>
+                    </span>
+                </a>
+            </li>
+            <li class="next">
+                <a href="/blog/2020-04-21-issue-72" class="prev">
+                    Issue 72
+                        	
+                    <span class="issue__pager__text">
+                        <!-- <span class="issue__pager__label">Next Post</span> -->
+                        <time class='published' datetime="2020-04-21 09:00:00">21 April 2020</time>
+                    </span>
+                    <span class="icon icon-angle-right"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <footer class="footer">
+        <div class="i">
+            <p>
+
+                      &copy;2016-2025 Perchology | 
+                <a href="/issues/sponsorship/index.html">Sponsorship</a>
+                 | Perchology is made by 
+                <a href="https://www.cvwdesign.co.uk/">Clive Walker</a>
+                .
+                    
+            </p>
+            <p>
+                <a href="https://grabaperch.com">Perch</a>
+                 is a product by Perch Runway Limited
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
+

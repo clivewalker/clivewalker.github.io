@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html class=" no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Title and Description -->
+    <title>Issue 76</title>
+    <meta name="description" content="Perch 3.1.7, Perch 4, Each Callback Function, Responsive Images with Perch, Site Example, One Line Layouts"/>
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Perchology"/>
+    <meta property="og:url" content="https://www.perchology.com/blog/2020-08-05-issue-76"/>
+    <meta property="og:title" content="Issue 76"/>
+    <meta property="og:description" content="Perch 3.1.7, Perch 4, Each Callback Function, Responsive Images with Perch, Site Example, One Line Layouts"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:author" content=""/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@perchology"/>
+    <meta name="twitter:title" content="Issue 76"/>
+    <meta name="twitter:description" content="Perch 3.1.7, Perch 4, Each Callback Function, Responsive Images with Perch, Site Example, One Line Layouts"/>
+    <meta name="twitter:url" content="https://www.perchology.com/blog/2020-08-05-issue-76"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic" rel="stylesheet">
+
+    <link href="/issues/assets/publication/themes/public_1/application.css" media="all" rel="stylesheet"/>
+    <link href="/issues/assets/stylesheet.css" media="all" rel="stylesheet"/>
+    <script src="/issues/assets/publication/themes/public_1/application.js"></script>
+    <style>
+    body {
+        font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif
+    }
+
+    .category__title, .issue__heading, .issue__pager__text time, .page__header {
+        font-family: Merriweather, Georgia, 'Times New Roman', Times, serif
+    }
+
+    .item__title a {
+        color:#69c
+    }
+
+    .issue__heading h1 {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 1rem;
+        text-transform:unset
+    }
+
+    .meta i {
+        color:rgba(69, 69, 71, .7)
+    }
+
+    .category .item--issue blockquote {
+        border-left:5px solid #ccc
+    }
+
+    pre {
+        font-size: .9em;
+        padding: .5rem;
+        background: #6699cc1c;
+        margin-bottom: 1rem;
+        white-space:break-spaces
+    }
+
+    .summary {
+        font-size: 120%;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 1rem
+    }
+    </style>
+</head>
+<body class="post">
+    <header class="header" role="banner">
+        <div class="navbar" role="navigation">
+            <div class="i">
+                <div class="navbar-collapse">
+                    <a class="navbar-a" href="/blog/">Blog</a>
+                    <a class="navbar-a" href="/issues/archives/1/index.html">Archives</a>
+                    <a class="navbar-a" href="/issues/sponsorship/index.html">Sponsorship</a>
+                </div>
+                <a class="navbar-a navbar-brand" href="/">
+                        Perchology
+                      </a>
+                <button class="navbar-a navbar-toggle">
+                    <span class="sr-only">Toggle Menu</span>
+                    <span class="navbar-toggle-bar"></span>
+                    <span class="navbar-toggle-bar"></span>
+                    <span class="icon icon-cross"></span>
+                </button>
+            </div>
+        </div>
+        <div class="intro intro--description ">
+            <div class="i">
+                <h1>The Newsletter has closed. But, here's one of the Issues</h1>
+                <!-- <h1>It <em>used</em> to be every few weeks. A curated publication full of interesting, relevant links about Perch CMS. But, it's no more. Here are the posts and issues of the Perchology Newsletter.</h1> -->
+            </div>
+        </div>
+
+    </header>
+    <article class="issue" id="start">
+        <header class="issue__heading">
+            <div class="i">
+                <h1>Issue 76 </h1>
+                <p class="meta">
+                    <i>
+                        <time class='published' datetime="2020-08-05 08:40:00">05 August 2020</time>
+                    </i>
+
+                          
+                                by 
+                    <i>
+                        <span class="p-author h-card">Clive Walker</span>
+                    </i>
+                </p>
+
+            </div>
+        </header>
+        <div class="issue__body">
+            <section class="category cc-introduction">
+                <div class="i" id="introduction">
+                    <h2 class="category__title">
+                        <span class="category__title__text">
+                                        Hello everyone
+                                    </span>
+                    </h2>
+                    <div class="item item--issue">
+                        <p>
+                            There's been some positive news this week with a Perch update and comments from lead developer Drew in the forum. 
+                            <br>
+                        </p>
+                        <p>
+                            Also in this issue, a fab post explaining the each callback function. 
+                            <br>
+                        </p>
+                        <p>From the Perch docs, how to manipulate images with Perch.</p>
+                        <p>And a great post showing the power of CSS these days.</p>
+                        <p>See you next time.</p>
+                        <div class="item__footer">
+                            <p>Clive Walker - Perchology</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="i">
+                <h2 class="category__title">
+                    <span class="category__title__text">
+                         News
+                    </span>
+                </h2>
+            </div>
+
+            <section class="category">
+                <div class="i">
+
+                    <div class="item item--issue item--link">
+                        <h3 class="item__title">
+                            <a href="https://grabaperch.com/update/v3-1-7">Perch 3.1.7 Update</a>
+                        </h3>
+                        <p>This release fixes several PHP 7.4 and MySQL 8 compatibility issues.</p>
+                        <div class="item__footer">
+                            <p>
+                                <a href="https://grabaperch.com/update/v3-1-7">grabaperch.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item item--issue item--link">
+                        <h3 class="item__title">
+                            <a href="https://community.perchcms.com/forum/thread/1219-any-version-4-news/?postID=6272#post6272">Perch 4 Development</a>
+                        </h3>
+                        <p>Lead developer Drew comments on Perch 4 development and putting the Blog app and other add-ons on GitHub.</p>
+                        <div class="item__footer">
+                            <p>
+                                <a href="https://community.perchcms.com/forum/thread/1219-any-version-4-news/?postID=6272#post6272">community.perchcms.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <div class="i">
+                <h2 class="category__title">
+                    <span class="category__title__text">
+                         How Do I
+                    </span>
+                </h2>
+            </div>
+
+            <section class="category">
+                <div class="i">
+
+                    <div class="item item--issue item--link">
+                        <h3 class="item__title">
+                            <a href="https://grabapipit.com/blog/the-each-callback">The Each Callback</a>
+                        </h3>
+                        <p>A great explanation of the each callback function, what it is and what it can be used for.</p>
+                        <div class="item__footer">
+                            <p>
+                                <a href="https://grabapipit.com/blog/the-each-callback">grabapipit.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <div class="i">
+                <h2 class="category__title">
+                    <span class="category__title__text">
+                         In the Docs
+                    </span>
+                </h2>
+            </div>
+
+            <section class="category">
+                <div class="i">
+
+                    <div class="item item--issue item--link">
+                        <h3 class="item__title">
+                            <a href="https://docs.grabaperch.com/perch/content/templates/how-do-i-use-responsive-images-in-perch/">Responsive images in Perch</a>
+                        </h3>
+                        <p>
+                            How do I use responsive images in Perch? Lots of template examples here from art direction to high-DPI and the use of 
+                            <code>srcset</code>
+                            .&nbsp;
+                        </p>
+                        <div class="item__footer">
+                            <p>
+                                <a href="https://docs.grabaperch.com/perch/content/templates/how-do-i-use-responsive-images-in-perch/">docs.grabaperch.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <div class="i">
+                <h2 class="category__title">
+                    <span class="category__title__text">
+                         Site Example
+                    </span>
+                </h2>
+            </div>
+
+            <section class="category">
+                <div class="i">
+
+                    <div class="item item--issue item--link">
+                        <h3 class="item__title">
+                            <a href="https://www.sheilacoates.foundation/">Sheila Coates Foundation</a>
+                        </h3>
+                        <p>
+                            A new site for a new grant-making UK charity. A lovely clean design by Kingfisher Design. Site build and Runway install by yours truly.
+                            <br>
+                        </p>
+                        <div class="item__footer">
+                            <p>
+                                <a href="https://www.sheilacoates.foundation/">sheilacoates.foundation</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <div class="i">
+                <h2 class="category__title">
+                    <span class="category__title__text">
+                         Other Links
+                    </span>
+                </h2>
+            </div>
+
+            <section class="category">
+                <div class="i">
+
+                    <div class="item item--issue item--link">
+                        <h3 class="item__title">
+                            <a href="https://1linelayouts.glitch.me/">1-Line Layouts</a>
+                        </h3>
+                        <p>Ten modern CSS layout and sizing techniques that highlight just how robust and impactful a single-line of styling code can be.</p>
+                        <div class="item__footer">
+                            <p>
+                                <a href="https://1linelayouts.glitch.me/">1linelayouts.glitch.me</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <aside class="category__footer cc-spn">
+                <div class="i">
+                    <h2>
+                        <a href="/issues/sponsorship/index.html">Support the Perchology Newsletter by becoming a sponsor!</a>
+                    </h2>
+                </div>
+            </aside>
+        </div>
+    </article>
+
+    <div class="issue__pager">
+        <ul class="i">
+            <li class="previous">
+                <a href="/blog/2020-07-09-issue-75" class="prev">
+                    Issue 75
+                        	
+                    <span class="icon icon-angle-left"></span>
+                    <span class="issue__pager__text">
+                        <!-- <span class="issue__pager__label">Previous Post</span> -->
+                        <time class='published' datetime="2020-07-09 08:08:00">09 July 2020</time>
+                    </span>
+                </a>
+            </li>
+            <li class="next">
+                <a href="/blog/2020-09-07-issue-77" class="prev">
+                    Issue 77
+                        	
+                    <span class="issue__pager__text">
+                        <!-- <span class="issue__pager__label">Next Post</span> -->
+                        <time class='published' datetime="2020-09-07 08:00:00">07 September 2020</time>
+                    </span>
+                    <span class="icon icon-angle-right"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <footer class="footer">
+        <div class="i">
+            <p>
+
+                      &copy;2016-2025 Perchology | 
+                <a href="/issues/sponsorship/index.html">Sponsorship</a>
+                 | Perchology is made by 
+                <a href="https://www.cvwdesign.co.uk/">Clive Walker</a>
+                .
+                    
+            </p>
+            <p>
+                <a href="https://grabaperch.com">Perch</a>
+                 is a product by Perch Runway Limited
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
